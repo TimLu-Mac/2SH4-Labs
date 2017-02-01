@@ -1,5 +1,4 @@
 /* Student Name: Tim Lu
- * Student Number: 001421596
  * Lab Section: 06
  * Question Summary
  * Implement a string processing function where it accepts two strings as 
