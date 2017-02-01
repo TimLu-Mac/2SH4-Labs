@@ -1,0 +1,41 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 4
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 13, 2016, 1:50 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*The following program accepts a float value representing a student's mark
+ * if the value lies within a certain range the program will outputs the student's letter grade
+ * 
+ */
+int main(int argc, char** argv) {
+    float average = 0.0;
+    printf("Please enter the average of the student\n");
+    scanf("%f", &average);
+    if(average >= 90.0 && average <= 100.0)
+        printf("The student's average is 4\n");
+    else if (average >= 80.0 && average < 90.0)
+        printf("The student's average is 3\n");
+    else if (average >= 70.0 && average < 80.0)
+        printf("The student's average is 2\n");
+    else if (average >= 60.0 && average < 70.0)
+        printf("The student's average is 1\n");
+    else if (average >= 0.0 && average < 60.0)
+        printf("The student's average is 0\n");
+    else
+        printf("That is an invalid input\n");
+    return (EXIT_SUCCESS);
+}
+

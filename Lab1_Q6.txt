@@ -1,0 +1,42 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 6
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 13, 2016, 3:03 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*the following program calculates the number of pythagorean triples with the maximum size of any side being 200
+ * 
+ */
+int main(int argc, char** argv) {
+    int total = 0;//total is the accumulator for the number of pythagorean triples
+    for(int i = 1; i <= 200; i++){//let this be side 2 //the exit condition for this side is if it's greater than 200
+        for(int j = 1; j <= i ; j++){//let this be side 1 the exit condition for this loop is if side 2 is greater than the first side or greater than 200
+            if (j >200)
+                break;
+            for(int k = 0; k*k <= i*i + j*j; k++){//the exit condition for this loop is if the square of the hypotneus is greater than the square of the other sides or if the hypotneus is greater than 200
+                if(k > 200)
+                    break;
+                if((i*i + j*j) == (k*k)){
+                    printf("Side 1 is %d, Side 2 is %d, hypotenuse is %d\n", j, i, k);//print the sides
+                    total++;
+                }
+                
+            }
+        }
+    }
+    printf("The total number of Pythagorean Triples between 1 and 200 is %d", total);
+    return (EXIT_SUCCESS);
+}
+

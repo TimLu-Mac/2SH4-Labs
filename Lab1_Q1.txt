@@ -1,0 +1,48 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 1
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 12, 2016, 5:04 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*This program computes the sum of all numbers that are 
+ * multiples of 3, between 10 and 100, with three different loops
+ * 
+ */
+int main(int argc, char** argv) {
+    int sum = 0, counter = 10;
+    //sum will be the total of the factors of 3
+    //counter will be used  used as an exit condition for the rest of the loop
+    for (int i = 10; i <= 100; i++){//this loops exits counter once the accumulator, i, is greater than 100)
+        if (i%3 == 0)//any number modded by 3 that results in a 0 must be a factor of 3
+            sum += i;//increase the sum by said number
+    }
+    printf("The for loop says: %d\n",sum);
+    sum = 0;//reintialize the sum to 0 after each run
+    //a similar process is done in the for loop is done for the rest of the loops
+    while (counter <= 100){
+        if(counter%3 == 0)
+            sum += counter;
+        counter++;
+    }
+    printf("The while loop says: %d\n",sum);
+    do{
+        if(counter%3 == 0)
+            sum += counter;
+        counter++;
+    }while(counter <= 100);
+    printf("The do while loop says: %d\n",sum);
+    return (EXIT_SUCCESS);
+}
+

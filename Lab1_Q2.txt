@@ -1,0 +1,48 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 2
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 12, 2016, 5:41 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*The following program will accept n number of terms from the user
+ * if the value of n is invalid the user will ask the user to input the term again
+ * once an n value has been given that is acceptable the program will accept values and once
+ * after the program has accepted n number of inputs the program will output the smallest one
+ */
+int main(int argc, char** argv) {
+    int terms = 0, flag = 1, smallest, temp;
+    while(flag ==  1){
+        printf("Please enter the number of terms that you wish to enter (this value must be positive)\n");
+        scanf("%d", &terms);
+        if(terms >= 1)
+            flag = 0;
+        else
+            printf("That value is not valid for the number of terms\n");
+    }
+    for(int i = 1; i <= terms; i++){
+        printf("Please enter term %d \n", i);
+        scanf("%d", &temp);
+        if (i == 1)
+            smallest = temp;
+        else{
+            if(temp < smallest)
+                smallest = temp;
+        }
+    }
+    
+    printf("The smallest number you entered was %d", smallest);
+    return (EXIT_SUCCESS);
+}
+

@@ -1,0 +1,41 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 8
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 13, 2016, 11:06 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*//the following program accepts a six digit number and prints it out backwards
+ * 
+ */
+int main(int argc, char** argv) {
+    int inputNumber = 0, n = 0, reverse = 0;
+    //reverse is the reversed number
+    while(1){//this is an infinite loop 
+        printf("Please enter the number that you want me to rearrange. I can only accept positive numbers greater than 0: ");
+        scanf("%d", &inputNumber);
+        if(inputNumber <= 0)//this checks  if the number is greater than 0
+            printf("That is an invalid number please enter a different number");
+        else//once it is the loop exits viva break
+            break;
+    }
+    while(inputNumber != 0){
+        n = inputNumber % 10;//n becomes the last digit of inputNumber
+        reverse = reverse * 10+ n;//reverse is increased by 10 and the single digit of n is added to the variable
+        inputNumber = (inputNumber - n)/10;//this line of code drops off the last digit in the inputted number
+    }
+    printf("The reverse number of your input is %d", reverse);//prints out the reverse number
+    return (EXIT_SUCCESS);
+}
+

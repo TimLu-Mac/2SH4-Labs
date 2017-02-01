@@ -1,0 +1,37 @@
+/* Tim Lu
+ * Lab Section 6
+ * Question 7
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   main.c
+ * Author: super
+ *
+ * Created on September 13, 2016, 4:15 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*//this program checks the number of perfect numbers starting from 0 to a maximum that the user inputs
+ * 
+ */
+int main(int argc, char** argv) {
+    int input = 0, tempTotal = 0;
+    printf("Please input the highest number of your range.\n");
+    scanf("%d", &input);
+    for(int i = 1; i <= input; i++){//this loops goes from 1 to the range that the user inputs
+        for(int j = 1; j < i; j++){//this loops goes from j to the value to i
+            if(i%j == 0)//this checks if j is a factor of i 
+                tempTotal += j;//the temporary total accumulates if it is
+        }
+        if(tempTotal == i)//if the tempTotal is equal to i than it is a perfect number and the program outputs it
+            printf("%d is a perfect number\n", tempTotal);
+        tempTotal = 0;//reset the tempTotal
+    }
+    return (EXIT_SUCCESS);
+}
+
