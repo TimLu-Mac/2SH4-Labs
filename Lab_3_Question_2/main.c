@@ -1,7 +1,6 @@
 /* Student Name: Tim Lu
  * Student Number: 001421596
  * Lab Section: 06
- * Lab 3 Question 1
  * Question Summary
  * Implement a string processing function where it accepts two strings as 
  * and combines them. The function must use dynamic memory allocation.
