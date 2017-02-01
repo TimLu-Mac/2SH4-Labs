@@ -1,5 +1,4 @@
 /* Student Name: Tim Lu
- * Student Number: 001421596
  * Lab Section: 06
  * Lab 4 Question 1 Test Class
  */
