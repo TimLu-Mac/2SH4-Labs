@@ -1,5 +1,4 @@
 /* Student Name: Tim Tianyu Lu
- * Student ID: 001421596
  * Lab 2 Question 6*/
 
 #include <stdio.h>
